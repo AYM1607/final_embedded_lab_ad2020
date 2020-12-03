@@ -15,4 +15,5 @@
 //#define BAUDRATESET(x) uint64_t br = (uint64_t)65536 * (8000000 - 16 * x) / 8000000;
 
 void initUART(void);
+uint8_t uart_read_byte(void);
 #endif /* UART_H_ */

@@ -53,4 +53,11 @@ void initUART(void) {
 	SERCOM0->USART.CTRLA.reg |= SERCOM_USART_CTRLA_ENABLE;
 }
 
+uint8_t uart_read_byte(){
+
+	while(!SERCOM0->USART.INTFLAG.bit.RXC);
+	return((uint8_t)SERCOM0->USART.DATA.reg);
+
+}
+
 
